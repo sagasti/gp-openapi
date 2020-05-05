@@ -1,0 +1,32 @@
+openapi: 3.0.0
+info:
+  title: GP.Prepaga
+  version: '1.0'
+  description: ''
+servers:
+  - url: 'http://localhost:3000'
+    description: Api
+paths:
+  '/Productos/{{Producto}}/Cuentas/{{Cuenta}}/Transacciones/Autorizaciones':
+    parameters:
+      - schema:
+          type: string
+        name: '{Producto'
+        in: path
+        required: true
+      - schema:
+          type: string
+        name: '{Cuenta'
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: addAuthorization
+      description: ''
+components:
+  schemas: {}
+  securitySchemes:
+    API Key:
+      type: openIdConnect
